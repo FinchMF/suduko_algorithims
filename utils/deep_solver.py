@@ -4,7 +4,7 @@ from keras.layers import Conv2D, BatchNormalization, Dense, Flatten, Reshape
 
 def suduko_network():
 
-    model = keras.Sequential()
+    model = keras.Sequential(name='Suduko_CNN_solver')
 
     model.add(Conv2D(64, kernel_size=(3,3), activation='relu', padding='same', input_shape=(9,9,1)))
     model.add(BatchNormalization())
