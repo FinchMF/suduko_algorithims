@@ -52,7 +52,7 @@ def inference_sudoku(sample, model):
     return pred
 
 
-def test_accuracy(feats, labels, model, inference_sudoku=inference_sudoku()):
+def test_accuracy(feats, labels, model):
     
     correct = 0
     
@@ -68,7 +68,7 @@ def test_accuracy(feats, labels, model, inference_sudoku=inference_sudoku()):
     print(correct/feats.shape[0])
 
 
-def solve_sudoku(game, model, inference_sudoku=inference_sudoku()):
+def solve_sudoku(game, model):
     
     game = game.replace('\n', '')
     game = game.replace(' ', '')
